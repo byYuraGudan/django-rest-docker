@@ -24,7 +24,7 @@ SECRET_KEY = '1bj8fk9=vnt2e%4f2mo2_f8edq#4%7$!rw^#+a3&bvsr8b26@0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 # Application definition
 
@@ -74,8 +74,12 @@ WSGI_APPLICATION = 'DjangoRest.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'yurez',
+        'USER': 'test',
+        'HOST': 'postgres',
+        'PORT': 5432,
+        'PASSWORD': '1qaz'
     }
 }
 
